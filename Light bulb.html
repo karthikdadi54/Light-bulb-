@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Light On Off</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 80px;
+      font-family: Arial, sans-serif;
+      background-color: #222;
+      color: white;
+    }
+
+    /* Hide radio buttons */
+    input {
+      display: none;
+    }
+
+    img {
+      width: 150px;
+      margin: 20px;
+    }
+
+    /* Buttons */
+    label {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-block;
+      color: white;
+    }
+
+    .on-btn {
+      background-color: green;
+    }
+
+    .off-btn {
+      background-color: red;
+    }
+
+    /* Default bulb OFF */
+    .bulb img {
+      content: url("https://www.w3schools.com/js/pic_bulboff.gif");
+    }
+
+    /* When ON radio is checked */
+    #on:checked ~ .bulb img {
+      content: url("https://www.w3schools.com/js/pic_bulbon.gif");
+    }
+
+    /* When OFF radio is checked */
+    #off:checked ~ .bulb img {
+      content: url("https://www.w3schools.com/js/pic_bulboff.gif");
+    }
+  </style>
+</head>
+<body>
+
+<h2>Light On / Off</h2>
+
+<!-- Radio buttons -->
+<input type="radio" name="light" id="on">
+<input type="radio" name="light" id="off" checked>
+
+<!-- Buttons -->
+<label for="on" class="on-btn">ON</label>
+<label for="off" class="off-btn">OFF</label>
+
+<!-- Bulb -->
+<div class="bulb">
+  <img alt="Bulb">
+</div>
+
+</body>
+</html>
